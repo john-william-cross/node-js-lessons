@@ -16,4 +16,4 @@ const upperCasedName = trimmedName.toUpperCase();
 console.log(`HEY ${upperCasedName}`);
 
 const lowerCasedName = trimmedName.toLowerCase();
-console.log(`shhhhhh... hi ${lowerCasedName}....`);
+console.log(`shhhhhh... hi ${lowerCasedName}....`); // random comment
