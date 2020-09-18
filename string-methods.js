@@ -18,68 +18,70 @@ const upperCasedName = trimmedName.toUpperCase();
 const lowerCasedName = trimmedName.toLowerCase();
 // console.log(`shhhhhh... hi ${lowerCasedName}....`); // random commentasdfasd
 
-const birthday = `4/21/1981`;
+let birthday = `4/21/1981`;
 
 const indexOfMonth = birthday.indexOf(`4`);
-console.log(`The string "4" is found at the ${indexOfMonth} of ${birthday}.`);
+// console.log(`The string "4" is found at the ${indexOfMonth} of ${birthday}.`);
 
 const firstChar = birthday[0];
-console.log(`The first char of ${birthday} is ${firstChar}.`);
+// console.log(`The first char of ${birthday} is ${firstChar}.`);
 
 const indexOfFirstSlash = birthday.indexOf(`/`);
-console.log(
-   `The first slash in ${birthday} is found at the ${indexOfFirstSlash} index.`
-);
+// console.log(
+//    `The first slash in ${birthday} is found at the ${indexOfFirstSlash} index.`
+// );
 
 const indexOfSecondSlash = birthday.indexOf(`/`, 3); //the 3 means start the search from this index
-console.log(
-   `The second slash in ${birthday} is found at the ${indexOfSecondSlash} index.`
-);
+// console.log(
+//    `The second slash in ${birthday} is found at the ${indexOfSecondSlash} index.`
+// );
 
 const indexOfLastSlash = birthday.lastIndexOf(`/`);
-console.log(
-   `The last slash in ${birthday} is found at the ${indexOfLastSlash} index.`
-);
+// console.log(
+//    `The last slash in ${birthday} is found at the ${indexOfLastSlash} index.`
+// );
 
 const phoneNumber = `515-333-7651`;
 const firstIndexOfDash = phoneNumber.indexOf(`-`);
 console.log(`The first index of dash is found at index of ${firstIndexOfDash}`);
 const secondIndexOfDash = phoneNumber.indexOf(`-`, 4); //this excludes characters before those at index 4 (but still knows they are there)
-console.log(
-   `The second index of dash is found at index of ${secondIndexOfDash}.`
-);
+// console.log(
+//    `The second index of dash is found at index of ${secondIndexOfDash}.`
+// );
 
 const childhoodNumber = `515-285-7925`;
 const lastIndexOfFive = childhoodNumber.lastIndexOf(`5`);
-console.log(
-   `The last index of five in my childhood phone number is at index number ${lastIndexOfFive}` //comment
-);
+// console.log(
+//    `The last index of five in my childhood phone number is at index number ${lastIndexOfFive}` //comment
+// );
 const middleIndexOfFive = childhoodNumber.lastIndexOf(`5`, 8); //why start from the back? if you know it's near the end of the string??
-console.log(
-   `The middle index of five in my childhood phone number is at index number ${middleIndexOfFive}`
-);
+// console.log(
+//    `The middle index of five in my childhood phone number is at index number ${middleIndexOfFive}`
+// );
 
 const indexOfSecondToLastSlash = birthday.lastIndexOf(`/`, 3); //lastIndexOf searches from right to left.
-console.log(
-   `The second to last slash in ${birthday} is found at the ${indexOfSecondToLastSlash} index.` //ask for another explanation of this :)
-);
+// console.log(
+//    `The second to last slash in ${birthday} is found at the ${indexOfSecondToLastSlash} index.` //ask for another explanation of this :)
+// );
 
-const indexOfDash = birthday.indexOf(`-`);
-console.log(`The dash in ${birthday} is found at the ${indexOfDash} index.`);
+const strToSearchFor = `21`; //you can put anything in this string and it will search for it!
+const indexOfStr = birthday.indexOf(strToSearchFor);
+// console.log(
+//    `The string of ${strToSearchFor} in ${birthday} is found at the ${indexOfStr} index.`
+// ); //will show -1 index to indicate it's not there
 
-if (indexOfDash >= 0) {
-   console.log(`${birthday} has at least 1 dash in it.`);
+if (birthday.indexOf(strToSearchFor) === -1) {
+   //if I'm search for a string and its index is not found(-1)
+   //    console.log(
+   //       `${birthday} does not have this string in it: ${strToSearchFor}.` //log this
+   //    );
 } else {
-   console.log(`${birthday} does not have at least 1 dash in it.`);
+   //    console.log(`${birthday} has this string in it: ${strToSearchFor}.`);
 }
 
-const somePassword = `bad-password`;
-const indexOfQuestionMark = somePassword.indexOf(`?`);
+// lastIndexOf also returns -1 if seomthing is not found. It just searches from right side to left.
 
-// if (indexOfQuestionMark >= 0) {
-//    console.log("${somePassword} has at least one question mark in it");
-// } else {
-//    console.log(
-//       `${somePassword} does not have at least one question mark in it`
-//    );
-// }
+birthday = `4/21/1980`;
+
+const month = birthday.slice(0, 1);
+console.log(`The month in birthday is ${month}.`);
