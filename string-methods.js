@@ -43,7 +43,7 @@ const indexOfLastSlash = birthday.lastIndexOf(`/`);
 
 const phoneNumber = `515-333-7651`;
 const firstIndexOfDash = phoneNumber.indexOf(`-`);
-console.log(`The first index of dash is found at index of ${firstIndexOfDash}`);
+// console.log(`The first index of dash is found at index of ${firstIndexOfDash}`);
 const secondIndexOfDash = phoneNumber.indexOf(`-`, 4); //this excludes characters before those at index 4 (but still knows they are there)
 // console.log(
 //    `The second index of dash is found at index of ${secondIndexOfDash}.`
@@ -83,5 +83,27 @@ if (birthday.indexOf(strToSearchFor) === -1) {
 
 birthday = `4/21/1980`;
 
-const month = birthday.slice(0, 1);
-console.log(`The month in birthday is ${month}.`);
+const delimiter = `/`;
+const indexOfMonthDayDelimiter = birthday.indexOf(delimiter); //get the index of the first `/` in birthday
+const indexOfDayYearDelimiter = birthday.lastIndexOf(delimiter);
+const month = birthday.slice(0, indexOfMonthDayDelimiter); //start at index 0, go to first `/`
+const day = birthday.slice(
+   indexOfMonthDayDelimiter + 1, //adding 1 removes the `/` since the delimiter is a slash
+   indexOfDayYearDelimiter
+);
+const year = birthday.slice(indexOfDayYearDelimiter + 1);
+console.log(`The month in ${birthday} is ${month}.`);
+console.log(`The day in ${birthday} is ${day}.`);
+console.log(`The year in ${birthday} is ${year}.`);
+
+yearToSearchFor = `1980`;
+if (birthday.includes(yearToSearchFor)) {
+   // does the same things as === -1
+   console.log(
+      `The birthday ${birthday} includes the string: ${yearToSearchFor}`
+   );
+} else {
+   console.log(
+      `The birthday ${birthday} does not include the string: ${yearToSearchFor}`
+   );
+}
