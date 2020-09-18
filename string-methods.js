@@ -91,19 +91,15 @@ const day = birthday.slice(
    indexOfMonthDayDelimiter + 1, //adding 1 removes the `/` since the delimiter is a slash
    indexOfDayYearDelimiter
 );
-const year = birthday.slice(indexOfDayYearDelimiter + 1);
+let year = birthday.slice(indexOfDayYearDelimiter + 1);
 console.log(`The month in ${birthday} is ${month}.`);
 console.log(`The day in ${birthday} is ${day}.`);
 console.log(`The year in ${birthday} is ${year}.`);
 
-yearToSearchFor = `1980`;
-if (birthday.includes(yearToSearchFor)) {
+year = `1981`;
+if (birthday.includes(year)) {
    // does the same things as === -1
-   console.log(
-      `The birthday ${birthday} includes the string: ${yearToSearchFor}`
-   );
+   console.log(`The birthday ${birthday} includes the string: ${year}`);
 } else {
-   console.log(
-      `The birthday ${birthday} does not include the string: ${yearToSearchFor}`
-   );
+   console.log(`The birthday ${birthday} does not include the string: ${year}`);
 }
