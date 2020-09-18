@@ -52,7 +52,7 @@ console.log(
 const childhoodNumber = `515-285-7925`;
 const lastIndexOfFive = childhoodNumber.lastIndexOf(`5`);
 console.log(
-   `The last index of five in my childhood phone number is at index number ${lastIndexOfFive}`
+   `The last index of five in my childhood phone number is at index number ${lastIndexOfFive}` //comment
 );
 const middleIndexOfFive = childhoodNumber.lastIndexOf(`5`, 8); //why start from the back? if you know it's near the end of the string??
 console.log(
