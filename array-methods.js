@@ -22,21 +22,15 @@ const firstLetter = name[0];
 
 const firstDay = holidays[0];
 
-console.log(
-   `The first day in this array is ${firstDay} and the first letter of the name is ${firstLetter}.`
-);
 const daysLength = holidays.length;
-console.log(`The length of this array is ${daysLength}`);
+// console.log(`The length of this array is ${daysLength}`);
 const lastDay = holidays[daysLength - 1];
-console.log(`The last day in this array is ${lastDay}.`);
+// console.log(`The last day in this array is ${lastDay}.`);
 
 //arrays have index numbers just like strings (a string is a list/array of characters!)
 
 const favoriteHoliday = `Independence Day (July 4)`;
 const indexOfIndependenceDay = holidays.indexOf(favoriteHoliday);
-console.log(
-   `${favoriteHoliday} is found at the ${indexOfIndependenceDay} of the holidays array.`
-);
 
 const specificHoliday = `John's birthday (May 2)`;
 
@@ -53,21 +47,13 @@ const specificHoliday = `John's birthday (May 2)`;
 
 //How to do this using .includes:
 if (holidays.includes(specificHoliday)) {
-   console.log(
-      `Yes, ${specificHoliday} is a holiday. It was found at the ${holidays.indexOf(
-         specificHoliday
-      )} index in the list of holidays}.`
-   );
 } else {
-   console.log(`No, ${specificHoliday} is not a holiday.`);
+   // console.log(`No, ${specificHoliday} is not a holiday.`);
 }
 
 const replaceableHoliday = `Washington's Birthday (Third Monday in February)`;
 //if you ever want to change something in an array, you need to know its index
 const indexOfReplaceableHoliday = holidays.indexOf(replaceableHoliday);
-console.log(
-   `We are going to replace ${replaceableHoliday} at the ${indexOfReplaceableHoliday} index of the holidays list`
-);
 
 const newHolidays = [
    ...holidays,
@@ -75,7 +61,22 @@ const newHolidays = [
 without spread element, we are just putting an array inside an array. Spread element unpacks the holidays
 array and adds each item into this new array*/
 newHolidays[indexOfReplaceableHoliday] = specificHoliday; //newHolidays[2] = `John's birthday (May 2)`
-console.log(`Here's a list of our old holidays:\n `, holidays);
+//console.log(`Here's a list of our old holidays:\n `, holidays);
 console.log(`Here's a list of our new holidays:\n `, newHolidays);
 
 //another way to copy an array is Array.from: on line 66 it would look like this: const newHolidays = Array.from(holidays)
+
+console.log(`Here's a list of our new holidays from HR:\n`, newHolidaysFromHr);
+
+//how to combine (concatinate) two arrays
+
+// const array1 = [`a`, `b`, `c`];
+// const array2 = [`d`, `e`, `f`];
+// const array3 = array1.concat(array2);
+// console.log(array3);
+
+const allHolidays = newHolidays.concat(newHolidaysFromHr);
+console.log(`Here's a list of ALL holidays:\n`, allHolidays);
+
+const allFlatHolidays = allHolidays.flat();
+console.log(`Here's a list of ALL holidays, BUT FLAT!:\n`, allFlatHolidays);
