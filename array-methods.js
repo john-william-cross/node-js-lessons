@@ -11,6 +11,12 @@ const holidays = [
    `Columbus Day (Second Monday in October)`,
 ];
 
+const newHolidaysFromHr = [
+   [`Veterans Day (November 11)`, 2020, `Megan`],
+   [`Thanksgiving Day (Fourth Thursday in November`, 2020, `Megan`],
+   [`Christmas Day (December 25)`, 2020, `Megan`],
+];
+
 const name = `Mike`;
 const firstLetter = name[0];
 
@@ -68,7 +74,7 @@ const newHolidays = [
 ]; /*use spread element (...) to make a copy of holidays array
 without spread element, we are just putting an array inside an array. Spread element unpacks the holidays
 array and adds each item into this new array*/
-newHolidays[indexOfReplaceableHoliday] = specificHoliday;
+newHolidays[indexOfReplaceableHoliday] = specificHoliday; //newHolidays[2] = `John's birthday (May 2)`
 console.log(`Here's a list of our old holidays:\n `, holidays);
 console.log(`Here's a list of our new holidays:\n `, newHolidays);
 
