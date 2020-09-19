@@ -32,10 +32,14 @@ console.log(
    `${favoriteHoliday} is found at the ${indexOfIndependenceDay} of the holidays array.`
 );
 
-const mikesBirthday = `Mike's Birthday (April 21)`;
+const specificHoliday = `Memorial Day (Last Monday in May)`;
 
-if (holidays.indexOf(mikesBirthday) === -1) {
-   console.log(`No, ${mikesBirthday} is not a holiday.`);
+//how to find if something is in a list or not using index
+if (holidays.indexOf(specificHoliday) === -1) {
+   console.log(`No, ${specificHoliday} is not a holiday.`);
 } else {
-   console.log(`Yes, ${mikesBirthday} is a holiday}`);
+   console.log(
+      `Yes, ${specificHoliday} is a holiday. It was found at the
+      ${holidays.indexOf(specificHoliday)} index in the list of holidays}`
+   );
 }
