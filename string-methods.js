@@ -80,7 +80,7 @@ if (birthday.indexOf(strToSearchFor) === -1) {
 }
 
 // lastIndexOf also returns -1 if seomthing is not found. It just searches from right side to left.
-
+//test comment
 birthday = `4/21/1980`;
 
 const delimiter = `/`;
