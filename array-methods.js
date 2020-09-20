@@ -75,8 +75,23 @@ console.log(`Here's a list of our new holidays from HR:\n`, newHolidaysFromHr);
 // const array3 = array1.concat(array2);
 // console.log(array3);
 
-const allHolidays = newHolidays.concat(newHolidaysFromHr);
+// const allHolidays = newHolidays.concat(newHolidaysFromHr);
+const allHolidays = [...newHolidays, ...newHolidaysFromHr]; //you can use ... (spread syntax) instead of concat
 console.log(`Here's a list of ALL holidays:\n`, allHolidays);
-
 const allFlatHolidays = allHolidays.flat();
 console.log(`Here's a list of ALL holidays, BUT FLAT!:\n`, allFlatHolidays);
+const allUniqHolidays = [...new Set(allFlatHolidays)]; //  <---change a set into an array like this
+console.log(`Here's a list of ALL UNIQUE holidays:\n`, allUniqHolidays);
+
+//always declar what you want first with const!
+
+const firstHolidays = allUniqHolidays.slice(0, allUniqHolidays.indexOf(2020)); //we want to slice up to 2020
+console.log(`Here are the first holidays:\n`, firstHolidays); // ********> \n puts things on a new line
+const secondHolidays = allUniqHolidays.slice(
+   allUniqHolidays.indexOf("Thanksgiving Day (Fourth Thursday in November") //we could just put slice(10); because thanksgiving
+   //is the tenth
+);
+console.log(`Here are the second holidays:\n`, secondHolidays);
+
+const allCleanedUpHolidays = firstHolidays.concat(secondHolidays);
+console.log(`Here are all the holidays:\n`, allCleanedUpHolidays);
