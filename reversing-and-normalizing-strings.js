@@ -28,15 +28,31 @@ const email = "mike@gmail.com";
 
 const greeting = `hello`;
 const greetingChars = greeting.split(``);
-console.log(greetingChars);
+//console.log(greetingChars);
 //outputs [ 'h', 'e', 'l', 'l', 'o' ]
 const copyOfGreetingChars = [...greetingChars];
 const reverseGreetingChars = copyOfGreetingChars.reverse();
 //reverse destroys original data so make a copy
-console.log(`Reversed chars: `, reverseGreetingChars);
+//console.log(`Reversed chars: `, reverseGreetingChars);
 //outputs Reversed chars:  [ 'o', 'l', 'l', 'e', 'h' ]
-console.log(`original chars: `, greetingChars);
+//console.log(`original chars: `, greetingChars);
 //outputs original chars:  [ 'h', 'e', 'l', 'l', 'o' ]
 const newGreeting = reverseGreetingChars.join(``);
-console.log(`Here's our new greeting:\n`, newGreeting);
+//console.log(`Here's our new greeting:\n`, newGreeting);
 //outputs Here's our new greeting: olleh
+
+const query = "           GOOGLE FONTS        ";
+const dbEntries = [`    Google Fonts    `, `Google Maps`];
+// const dbEntry = dbEntries[0];
+// const lowerCasedDbEntry = dbEntry.toLowerCase(); // `google fonts`
+// console.log(lowerCasedDbEntry);
+// const trimmedDbEntry = lowerCasedDbEntry.trim();
+// console.log(trimmedDbEntry);
+// const lowerCasedQuery;
+// const trimmedQuery
+const isInDb = query.toLowerCase().trim() === dbEntries[0].toLowerCase().trim();
+if (isInDb) {
+   console.log(`We found a result!`);
+} else {
+   console.log(`Sorry, couldn't find anything for ${query}`);
+}
