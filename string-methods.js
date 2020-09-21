@@ -8,7 +8,7 @@ const startTrimmedName = name.trimStart(); // can also use trimLeft()
 
 const endTrimmedName = name.trimEnd(); // can also use trimRight()
 // console.log(`The end/right trimmed  name is ${endTrimmedName}.`);
-
+console.log(numAsString);
 const nameLength = trimmedName.length;
 // console.log(`The length of ${trimmedName} is ${nameLength}.`);
 
