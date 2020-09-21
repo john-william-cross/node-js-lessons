@@ -53,3 +53,27 @@
 // console.log(holidayDates);
 
 //Nesting For Loops
+
+const users = [
+   ["MIKE", "ZETLOW", "MIKE@GMAIL.COM", "met him at Demo Day"],
+   ["John", "John@gmail.com"],
+   [20200921, "sue"],
+];
+// Please provide normalized data for each user field (everything lower cased)
+// Please keep in their original rows
+let normalizedUsers = []; //create empty string 'normalizedUsers'
+for (let i = 0; i < users.length; i++) {
+   //for every index in array 'users'
+   const userFields = users[i]; //grab the data at the current index
+   let newUserFields = []; //create new blank array 'newUserFields'
+   for (let i2 = 0; i2 < userFields.length; i2++) {
+      //for each item in each array in users
+      const userField = String(userFields[i2]); //turn each of those items into a string
+      const lowerCasedField = userField.toLowerCase(); //make each of those strings lower case
+      newUserFields = newUserFields.concat(lowerCasedField); //take all lower-cased string items from each index of original
+      //`users` array and put each one into its own array `newUserFields
+   }
+   normalizedUsers = normalizedUsers.concat([newUserFields]); //put each of those arrays into its own index
+   // in the normalizedUsers array
+}
+console.log(normalizedUsers);
