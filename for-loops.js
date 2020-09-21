@@ -61,7 +61,7 @@ const users = [
 ];
 // Please provide normalized data for each user field (everything lower cased)
 // Please keep in their original rows
-let normalizedUsers = []; //create empty string 'normalizedUsers'
+let normalizedUsers = []; //create empty array 'normalizedUsers'
 for (let i = 0; i < users.length; i++) {
    //for every index in array 'users'
    const userFields = users[i]; //grab the data at the current index
