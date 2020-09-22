@@ -41,7 +41,7 @@ const newGreeting = reverseGreetingChars.join(``);
 //console.log(`Here's our new greeting:\n`, newGreeting);
 //outputs Here's our new greeting: olleh
 
-const query = "           GOOGLE FONTS        ";
+const query = "           GOOGLe FONTS        ";
 const dbEntries = [`    Google Fonts    `, `Google Maps`];
 // const dbEntry = dbEntries[0];
 // const lowerCasedDbEntry = dbEntry.toLowerCase(); // `google fonts`
