@@ -74,10 +74,19 @@ function checkIsOver(str, num) {
 const userInput = "Hello world";
 const maxChars = 240;
 const isOver = checkIsOver(userInput, maxChars);
-console.log(isOver);
+console.log(hasError);
 
-if (isOver) {
-   // display error message to user
-} else {
-   // submit the input
+const id = `#char-counter`;
+const message = `You have exceeded the character limit`;
+showError(hasError, id, message);
+
+function showError(hasError, id, message) {
+   const errorId = `${id}-error`;
+
+   if (hasError) {
+      $(id).show(errorId);
+      $(errorId).html(message);
+   } else {
+      $(id).hide(errorId);
+   }
 }
