@@ -34,7 +34,7 @@ function truncateString(str, num) {
    const strLength = str.length;
 
    if (strLength > num) {
-      splitString = str.split(``);
+      //   splitString = str.split(``); <-- don't need this!!
       slicedString = str.slice(0, num);
       str = slicedString + `...`;
       console.log(str);
@@ -47,7 +47,7 @@ function truncateString(str, num) {
 
 // truncateString("A-tisket a-tasket A green and yellow basket", 8);
 
-// truncateString("Peter Piper picked a peck of pickled peppers", 11);
+truncateString("Peter Piper picked a peck of pickled peppers", 11);
 
 // truncateString(
 //    "A-tisket a-tasket A green and yellow basket",
