@@ -31,19 +31,34 @@
 // Return the truncated string with a ... ending.
 
 function truncateString(str, num) {
-   const stringSplitAtSpaces = str.split(` `);
-   const lengthOfStringSplitAtSpaces = stringSplitAtSpaces.length;
-   console.log(stringSplitAtSpaces);
-   //    console.log(lengthOfStringSplitAtSpaces);
+   const strLength = str.length;
 
-   if (lengthOfStringSplitAtSpaces > num) {
-      //   console.log(`tooshort!`);
-      slicedString = stringSplitAtSpaces.slice([num]);
-      console.log(slicedString);
-      str = slicedString;
+   if (strLength > num) {
+      splitString = str.split(``);
+      slicedString = str.slice(0, num);
+      str = slicedString + `...`;
       console.log(str);
+      return str;
+   } else {
+      console.log(str);
+      return str;
    }
-   return str;
 }
 
-truncateString("Hello Everybody! Hi Doctor Nick!", 3);
+// truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+// truncateString("Peter Piper picked a peck of pickled peppers", 11);
+
+// truncateString(
+//    "A-tisket a-tasket A green and yellow basket",
+//    "A-tisket a-tasket A green and yellow basket".length
+// );
+
+// truncateString(
+//    "A-tisket a-tasket A green and yellow basket",
+//    "A-tisket a-tasket A green and yellow basket".length + 2
+// );
+
+// truncateString("A-", 1);
+
+// truncateString("Absolutely Longer", 2);
