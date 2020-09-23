@@ -37,19 +37,47 @@
 
 /* ANOTHER WAY TO DO WHAT'S ABOVE */
 
-function toReverse(str) {
-   if (str === ``) {
-      return `Error: String cannot be empty`;
-   }
-   try {
-      const chars = str.split("");
-      const reversedChars = chars.reverse();
-      const reversedStr = reversedChars.join(``);
-      return reversedStr;
-   } catch {
-      return `Error: please input a string`; //what if input is not defined, i.e. toReverse(apple)
-   }
+//this is a good utility function to use in your code :)
+// function toReverse(str) {
+//    if (str === ``) {
+//       throw Error(`String cannot be empty`);
+//    }
+//    try {
+//       const chars = str.split("");
+//       const reversedChars = chars.reverse();
+//       const reversedStr = reversedChars.join(``);
+//       return reversedStr;
+//    } catch {
+//       return `Error: There is a problem with toReverse()`; //what if input is not defined, i.e. toReverse(apple)
+//    }
+// }
+
+// const reversedString = toReverse(`cat`);
+// console.log(reversedString);
+
+// given a string and a number
+// check the length of the string
+// if the length is over the number, return true
+// else return false
+
+function checkIsOver(str, num) {
+   return str.length > num;
+
+   //    if (str.length > num) {
+   //       return true;
+   //    } else {
+   //       return false;
+   //    }
+   // instead of the if/else block, you could also just put `return str.lognth > num`
 }
 
-const reversedString = toReverse();
-console.log(reversedString);
+const userInput = "Hello world";
+const maxChars = 240;
+const isOver = checkIsOver(userInput, maxChars);
+console.log(isOver);
+
+if (isOver) {
+   // display error message to user
+} else {
+   // submit the input
+}
