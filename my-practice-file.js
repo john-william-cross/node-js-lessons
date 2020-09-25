@@ -63,26 +63,42 @@
 
 // // truncateString("Absolutely Longer", 2);
 
-function findLongestWordLength(str) {
-   const longestWordLengthSplit = str.split(` `);
-   let count = 0;
-   //loop through the array starting at index 0.
-   for (let i = 0; i < longestWordLengthSplit.length; i++) {
-      const word = longestWordLengthSplit[i];
-      //get the length of the word at that index and store it in a variable
-      const wordLength = word.length;
-      // if the length of the word at a particular index is greater than the number stored in the variable,
-      //reassign that variable to the larger number
-      if (wordLength > count) {
-         count = wordLength;
-      }
-   }
-   //////////// remember to write comments that reflect what my stated plan was!! /////////
-   return count;
+// function findLongestWordLength(str) {
+//    const longestWordLengthSplit = str.split(` `);
+//    let count = 0;
+//    //loop through the array starting at index 0.
+//    for (let i = 0; i < longestWordLengthSplit.length; i++) {
+//       const word = longestWordLengthSplit[i];
+//       //get the length of the word at that index and store it in a variable
+//       const wordLength = word.length;
+//       // if the length of the word at a particular index is greater than the number stored in the variable,
+//       //reassign that variable to the larger number
+//       if (wordLength > count) {
+//          count = wordLength;
+//       }
+//    }
+//    //////////// remember to write comments that reflect what my stated plan was!! /////////
+//    return count;
+// }
+
+// const longestWordLength = findLongestWordLength(
+//    "What if we try a super-long word such as otorhinolaryngology"
+// );
+
+// console.log(longestWordLength);
+
+function bouncer(arr) {
+   falsyValuesArray = arr;
+
+   
+   arrayToString = arr.toString();
+   splitArray = arrayToString.split(" ");
+   console.log(splitStringToArray);
+   
+   for(let i = 0; i < )
+
+   //convert each value to a boolean (per hint)
+   // return arr;
 }
 
-const longestWordLength = findLongestWordLength(
-   "What if we try a super-long word such as otorhinolaryngology"
-);
-
-console.log(longestWordLength);
+bouncer([7, "ate", "", false, 9]);
