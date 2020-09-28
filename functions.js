@@ -10,12 +10,14 @@
 // output that reversed string
 
 function toReverse(str) {
-   if (typeof str === String) {
+   try {
+      const chars = str.split(``);
+      const reversedChars = chars.reverse();
+      const reversedStr = reversedChars.join(``);
+      return reversedStr;
+   } catch {
+      return `Error: there is a problem with toReverse`;
    }
-   const chars = str.split(``);
-   const reversedChars = chars.reverse();
-   const reversedStr = reversedChars.join(``);
-   return reversedStr;
 }
-const reversedString = toReverse(`hello`);
+const reversedString = toReverse(["asdf"]);
 console.log(reversedString);
