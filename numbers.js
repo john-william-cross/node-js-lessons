@@ -29,8 +29,8 @@ function getRandomInt(min, max) {
    return Math.floor(Math.random() * (max + 1 - min) + min); //gives entire range plus minimum
 }
 
-const randomInt = getRandomInt(1, 3);
-// console.log(`Random integer between 1 and 16: ${randomInt}`);
+const randomInt = getRandomInt(1, 16);
+console.log(`Random integer between 1 and 16: ${randomInt}`);
 
 const weirdness = Math.round(55);
 
@@ -49,9 +49,9 @@ const priceOfCup = 3.2555;
 
 // use toFixed to round to 2 decimal places
 function round(num, numOfDecPlaces) {
-   return Number(Number(num).toFixed(numOfDecPlaces)); // wrapping everything in Number() converts it from a strin
+   return Number(Number(num).toFixed(numOfDecPlaces)); // wrapping everything in Number() converts it from a string
    // to a number (toFIxed changes something to a string!!)
 }
 
 const roundedPriceOfCup = round(priceOfCup, 2); //round to two decimals; good to use for prices
-console.log(roundedPriceOfCup);
+// console.log(roundedPriceOfCup);
