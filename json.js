@@ -4,10 +4,36 @@ const user = {
    password: getPassword(),
    createdAt: getCreatedAt(),
    id: getId(),
+   socialProfiles: [
+      {
+         site: `facebook`,
+         username: `mikez`,
+         id: `0060433dd07`,
+         profilePic: ``,
+         image: {
+            small: `small.jpg`,
+            medium: `medium.jpg`,
+            large: `large.jpg`,
+         },
+      },
+      {
+         site: `twitter`,
+         username: `mikezetlow`,
+         id: `48aec43982`,
+         thumbnail: ``,
+      },
+   ],
 };
 
-console.log(user);
+// const indexOfFacebook = 0;
 
+// console.log(user.socialProfiles[indexOfFacebook].image.small); // this gives us small.jpg
+
+//see video at 26 minutes for example from las vegas developers
+const userAsJson = JSON.stringify(user);
+const userAsObj = JSON.parse(userAsJson);
+console.log(userAsObj);
+console.log(userAsJson); //Math.round(), Object.assign({}) JSON.stringify  =>global objects
 /// functions start here ///
 
 function getEmail() {
