@@ -16,6 +16,9 @@ const copyOfUser = {
    ...user,
 };
 
+//another way to make a copy without using spread operator is Object.assign
+// const copyOfUser = Object.assign({}, user);
+
 copyOfUser.isActive = true; // this adds an `isActive` key/property with a value of true
 copyOfUser.tokenExpiredAt = user.createdAt + 86400000; //gets us the value at the property/key `createdAt`
 //and adds 24 hours (in milliseconds) to that time, hence making it expire in 24 hours
