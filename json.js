@@ -36,7 +36,37 @@ const userAsObj = JSON.parse(userAsJson);
 console.log(userAsJson); //Math.round(), Object.assign({}) JSON.stringify  =>global objects
 
 //********** ~~~ update an object: ~~~ *********//
-user.socialProfiles[indexOfFacebook].image.large = `large2.jpg`; //THIS MUTATES THE ORIGINAL DON'T DO IT
+
+// newUser = JSON.parse(JSON.stringify(user)); // deep copy, losing all previous references
+
+//other way to make deep copy:
+newUser = deepCopy(undefined);
+console.log(newUser);
+if (newUser !== undefined) {
+   newUser.socialProfiles[indexOfFacebook].image.large = `large3.jpg`; //THIS MUTATES THE ORIGINAL DON'T DO IT
+   console.log(`----------------`);
+   console.log(newUser.socialProfiles);
+}
+console.log(`HERE"S THE FUNCTION: `, newUser);
+
+function deepCopy(obj) {
+   /// here's a deep copy function you can use
+
+   const str = JSON.stringify(obj);
+   return safelyParseJson(str);
+}
+
+function safelyParseJson(str) {
+   try {
+      JSON.parse(str);
+   } catch {
+      // if error return the original value
+      return str;
+   }
+   return JSON.parse(str);
+}
+
+console.log(`----------------`);
 console.log(user.socialProfiles);
 
 /// functions start here ///
