@@ -20,7 +20,7 @@ const users = [
 // map returns a new array doing whatever changes you ask it to
 const newUsers = users.map((user) => {
    //for every user, in this list of users, return a user
-   //    return user.name; //returns just a list of objects as a list of strings
+   return user.name; //returns just a list of objects as a list of strings
    const newUser = { ...user }; // if you do something inside the code block it will update the old array
    // we have to make a copy!!!
    newUser.createdAt = Date.now(); //adds a new property to user called createdAt
