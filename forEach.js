@@ -67,9 +67,3 @@ users.forEach((user) => {
    }
 });
 console.log(activeUsers);
-
-// users.forEach(() => {
-//    //always set up like this
-//    //whatever you want to do
-//    //this is technically a side effect
-// });
