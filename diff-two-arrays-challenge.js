@@ -1,21 +1,26 @@
 function diffArray(arr1, arr2) {
    let newArr = [];
-   combinedArr = arr1.concat(arr2);
-   //so I can compare items in the list to other items in same list
 
-   for (let i = 0; i < combinedArr.length; i++) {
-      const item = combinedArr[i];
-      console.log(`Here's the item: `, item);
-
-      if (newArr.includes(item) === false) {
-         newArr = combinedArr.concat(item);
-         console.log(`Here's the newArr: `, newArr);
-      } else {
-         newArr = newArr;
+   arr2.forEach((item2) => {
+      if (!arr1.includes(item2)) {
+         newArr = newArr.concat(item2);
       }
-   }
+   });
+
+   arr1.forEach((item1) => {
+      if (!arr2.includes(item1)) {
+         newArr = newArr.concat(item1);
+      }
+   });
 
    return newArr;
 }
 
-diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+// Go through things one by one, mentally substituting data
+// for the variables; also, be sure to use more than one test case
+
+console.log(diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]));
+
+// when I go through arr1 and look at each item, ask `is this item
+// also in arr2?` If it isn't in arr2, put that item into a new array.
+// otherwise, don't.
