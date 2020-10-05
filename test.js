@@ -147,4 +147,4 @@ let ratings = watchList.map((movie) => {
 //    return newFormattedWatchlist;
 // });
 console.log(ratings);
-console.log(JSON.stringify(ratings));
+// console.log(JSON.stringify(ratings));

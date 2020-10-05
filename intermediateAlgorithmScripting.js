@@ -1,45 +1,26 @@
-var strings = [
-   "Dolce & Gabbana",
+function convertHTML(str) {
+   const splitStr = str.split(``);
 
-   "Hamburgers < Pizza < Tacos",
+   const updatedStr = splitStr.map((char) => {
+      if (char === `&`) {
+         return `&amp;`;
+      } else if (char === `<`) {
+         return `&lt;`;
+      } else if (char === `>`) {
+         return `&gt;`;
+      } else if (char === `"`) {
+         return `&quot;`;
+      } else if (char === `'`) {
+         return `&apos;`;
+      } else {
+         return char;
+      }
+   });
 
-   "Sixty > twelve",
+   const joinUpdatedStr = updatedStr.join(``);
+   const stringed = joinUpdatedStr.toString();
+   return stringed;
+}
 
-   'Stuff in "quotation marks"',
-
-   "Schindler's List",
-
-   "<>",
-
-   "abc",
-];
-
-// for (let i = 0; i < strings.length; i++) {
-//    const singleString = strings[i];
-//    console.log(singleString);
-// }
-
-strings.map((string) => {
-   console.log(string);
-});
-
-const conversions = strings.map((char) => {
-   if ((char = `<`)) {
-      return `&lt`;
-   } else if ((char = `>`)) {
-      return `&gt`;
-   } else if ((char = `&`)) {
-      return `&amp`;
-   } else if ((char = `"`)) {
-      return `&quot`;
-   } else if ((char = `<>`)) {
-      return `&lt&gt`;
-   } else {
-      return char;
-   }
-});
-
-// let newString = strings.map((char) => {
-//     return { title: movie.Title, rating: movie.imdbRating };
-//     // returns new object with a property of title and rating
-//  });
+const x = convertHTML('Stuff in "quotation marks"');
+console.log(x);
