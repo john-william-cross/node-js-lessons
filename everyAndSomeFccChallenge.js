@@ -7,19 +7,21 @@
 
 const arrayOfNums = [1, 2, 3, 4, 5];
 
-const hasPositiveNums = arrayOfNums.some((num) => {
+const hasPositiveNums = arrayOfNums.every((num) => {
    return num > 0;
 });
 
+console.log(hasPositiveNums);
+
 // console.log(hasPositiveNums);
 
-console.log(checkPositive([1, 2, -3, 4, 5]));
+// console.log(checkPositive([1, 2, -3, 4, 5]));
 
-function checkPositive(arr) {
-   return arr.some((num) => {
-      return num > 0;
-   });
-}
+// function checkPositive(arr) {
+//    return arr.some((num) => {
+//       return num > 0;
+//    });
+// }
 
 // video example:
 // const hasGithubUsers = users.every((user) => {

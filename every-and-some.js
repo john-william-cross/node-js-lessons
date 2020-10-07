@@ -78,7 +78,7 @@ const users = [
 
 const isEveryUserOnFb = users.every((user) => {
    // go through all the social profiles
-   const siteNames = user.socialProfiles.map((profile) => {
+   return user.socialProfiles.map((profile) => {
       //create a new list of all social profile sites
       return profile.site;
    });
@@ -106,4 +106,4 @@ const hasGithubUsers = users.some((user) => {
    return siteNames.includes(`github`); //for this user does it include facebook? if true, keep going through users
 });
 
-console.log(`Do we have any Github users? `, hasGithubUsers); //returns false as not every user is on fb
+console.log(`Do we have any Github users? `, isEveryUserOnFb); //returns false as not every user is on fb
