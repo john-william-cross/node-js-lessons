@@ -36,13 +36,43 @@ const customer = {
 
 // You have 3 pizzas and 1 customer. How would you return an array of all the pizzas this customer may like? (Assuming a customer may like any pizza with any one of their toppings.)
 
-const allToppings = pizzas.map((pizza) => {
-   console.log(pizza.toppings[0].name);
-   console.log(pizza.toppings[1].name);
-});
+// const allToppings = pizzas.map((pizza) => {
+//    console.log(pizza.toppings[0].name);
+//    console.log(pizza.toppings[1].name);
+// });
 
-// const customerToppings = customer.favoriteToppings;
-// console.log(customerToppings);
+const veggieDelight =
+   pizzas[0].toppings[0].name + ", " + pizzas[0].toppings[1].name;
+console.log(veggieDelight);
 
-// const customerToppings = customer.favoriteToppings;
-// console.log(`Here are the customer's preferred toppings: `, customerToppings);
+const firstPizzaToppings =
+   pizzas[0].toppings[0].name + ", " + pizzas[0].toppings[1].name;
+console.log(firstPizzaToppings);
+
+// const combo = firstPizzaTopping + ", " + secondPizzaTopping;
+
+// console.log(combo);
+
+// const customerFirstFav = customer.favoriteToppings[0].name;
+// const customerSecondFav = customer.favoriteToppings[1].name;
+// const customerFavs = customerFirstFav + ", " + customerSecondFav;
+// console.log(customerFavs);
+
+// const comboToArray = combo.split(", ");
+// console.log(comboToArray);
+// const customerFavsToArray = customerFavs.split(", ");
+// console.log(customerFavsToArray);
+
+// const match = comboToArray.some((r) => customerFavsToArray.indexOf(r) >= 0);
+// console.log(match);
+// // console.log("\n");
+// // console.log(customer.favoriteToppings[0].name);
+// // console.log(customer.favoriteToppings[1].name);
+// // const customerToppings = customer.favoriteToppings;
+// // console.log(`Here are the customer's preferred toppings: `, customerToppings);
+
+// // let match;
+
+// // if (allToppings.includes(customer.favoriteToppings[0].name)) {
+// //    console.log("match");
+// // }
