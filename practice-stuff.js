@@ -25,25 +25,31 @@ const pizzas = [
    },
 ];
 
-filteredPizzas = pizzas.filter((pizza) => {
-   return (
-      pizza.toppings[0].name.includes("Green Peppers") ||
-      pizza.toppings[0].name.includes("Tomatoes") ||
-      pizza.toppings[1].name.includes("Green Peppers") ||
-      pizza.toppings[1].name.includes("Tomatoes")
-   );
+const timSolution = pizzas.filter((p) => {
+   p.toppings.includes("Green Peppers");
 });
 
-console.log(filteredPizzas);
+console.log(timSolution);
 
-const customer = {
-   id: "8523a650-e9da-4bc2-9346-303a0a04ba9f",
-   name: "Mur Lafferty",
-   favoriteToppings: [
-      { id: "4e2eb71d-8207-46c4-bc64-12a4855337ee", name: "Green Peppers" },
-      // { id: "9c5eb777-3e1c-4fc1-91a2-cee96e69d4c1", name: "Tomatoes" },
-   ],
-};
+// filteredPizzas = pizzas.filter((pizza) => {
+//    return (
+//       pizza.toppings[0].name.includes("Green Peppers") ||
+//       pizza.toppings[0].name.includes("Tomatoes") ||
+//       pizza.toppings[1].name.includes("Green Peppers") ||
+//       pizza.toppings[1].name.includes("Tomatoes")
+//    );
+// });
+
+// console.log(filteredPizzas);
+
+// const customer = {
+//    id: "8523a650-e9da-4bc2-9346-303a0a04ba9f",
+//    name: "Mur Lafferty",
+//    favoriteToppings: [
+//       { id: "4e2eb71d-8207-46c4-bc64-12a4855337ee", name: "Green Peppers" },
+//       // { id: "9c5eb777-3e1c-4fc1-91a2-cee96e69d4c1", name: "Tomatoes" },
+//    ],
+// };
 
 // const allPizzaToppings = pizzas.map((pizza) => {
 //    return pizza.toppings;
