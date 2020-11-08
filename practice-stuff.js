@@ -25,54 +25,33 @@ const pizzas = [
    },
 ];
 
+filteredPizzas = pizzas.filter((pizza) => {
+   return (
+      pizza.toppings[0].name.includes("Green Peppers") ||
+      pizza.toppings[0].name.includes("Tomatoes") ||
+      pizza.toppings[1].name.includes("Green Peppers") ||
+      pizza.toppings[1].name.includes("Tomatoes")
+   );
+});
+
+console.log(filteredPizzas);
+
 const customer = {
    id: "8523a650-e9da-4bc2-9346-303a0a04ba9f",
    name: "Mur Lafferty",
    favoriteToppings: [
       { id: "4e2eb71d-8207-46c4-bc64-12a4855337ee", name: "Green Peppers" },
-      { id: "9c5eb777-3e1c-4fc1-91a2-cee96e69d4c1", name: "Tomatoes" },
+      // { id: "9c5eb777-3e1c-4fc1-91a2-cee96e69d4c1", name: "Tomatoes" },
    ],
 };
 
-// You have 3 pizzas and 1 customer. How would you return an array of all the pizzas this customer may like? (Assuming a customer may like any pizza with any one of their toppings.)
-
-// const allToppings = pizzas.map((pizza) => {
-//    console.log(pizza.toppings[0].name);
-//    console.log(pizza.toppings[1].name);
+// const allPizzaToppings = pizzas.map((pizza) => {
+//    return pizza.toppings;
 // });
 
-const veggieDelight =
-   pizzas[0].toppings[0].name + ", " + pizzas[0].toppings[1].name;
-console.log(veggieDelight);
+// const customerToppings = customer.favoriteToppings[0];
 
-const firstPizzaToppings =
-   pizzas[0].toppings[0].name + ", " + pizzas[0].toppings[1].name;
-console.log(firstPizzaToppings);
+// console.log(`all pizza toppings: `, allPizzaToppings);
+// console.log(`customer toppings: `, customerToppings);
 
-// const combo = firstPizzaTopping + ", " + secondPizzaTopping;
-
-// console.log(combo);
-
-// const customerFirstFav = customer.favoriteToppings[0].name;
-// const customerSecondFav = customer.favoriteToppings[1].name;
-// const customerFavs = customerFirstFav + ", " + customerSecondFav;
-// console.log(customerFavs);
-
-// const comboToArray = combo.split(", ");
-// console.log(comboToArray);
-// const customerFavsToArray = customerFavs.split(", ");
-// console.log(customerFavsToArray);
-
-// const match = comboToArray.some((r) => customerFavsToArray.indexOf(r) >= 0);
-// console.log(match);
-// // console.log("\n");
-// // console.log(customer.favoriteToppings[0].name);
-// // console.log(customer.favoriteToppings[1].name);
-// // const customerToppings = customer.favoriteToppings;
-// // console.log(`Here are the customer's preferred toppings: `, customerToppings);
-
-// // let match;
-
-// // if (allToppings.includes(customer.favoriteToppings[0].name)) {
-// //    console.log("match");
-// // }
+// You have 3 pizzas and 1 customer. How would you return an array of all the pizzas this customer may like? (Assuming a customer may like any pizza with any one of their toppings.)
