@@ -23,14 +23,6 @@ const pizzas = [
          { id: "c7316ee6-b9eb-4ce6-999f-56676970b3a1", name: "Sausage" },
       ],
    },
-   // {
-   //    id: "29195a77-824e-41c3-8d32-8b95223f05bf",
-   //    name: "Tim's Taco Pizza",
-   //    toppings: [
-   //       { id: "5c9e2631-9b4c-4458-8fb0-c28bc590a462", name: "Tomatoes" },
-   //       { id: "c7316ee6-b9eb-4ce6-939f-56676970b3a1", name: "Green Peppers" },
-   //    ],
-   // },
 ];
 
 const customer = {
@@ -42,20 +34,42 @@ const customer = {
    ],
 };
 
-let pizzaNames = [];
-for (let i = 0; i < pizzas.length; i++) {
-   const pizza = pizzas[i];
-   for (let i2 = 0; i2 < customer.favoriteToppings.length; i2++) {
-      const favTop = customer.favoriteToppings[i2];
-      if (pizza.toppings.find((topping) => topping.name === favTop.name)) {
-         pizzaNames[pizzaNames.length] = pizza.name;
-         break;
+let toppings = [];
+let pizzasCustomerWouldLike = [];
+
+pizzas.forEach((pizza) => {
+   toppings = pizza.toppings;
+   // console.log(toppings);
+
+   toppings.filter((topping) => {
+      if (
+         topping.name.includes("Green Peppers") ||
+         topping.name.includes("Tomatoes")
+      ) {
+         console.log("Customer would like this pizza: ", pizza.name + "!");
       }
-   }
-}
-console.log(pizzaNames);
+   });
+});
 
 // let pizzaNames = [];
+// for (let i = 0; i < pizzas.length; i++) {
+//    const pizza = pizzas[i];
+//    for (let i2 = 0; i2 < customer.favoriteToppings.length; i2++) {
+//       const favTop = customer.favoriteToppings[i2];
+//       if (pizza.toppings.find((topping) => topping.name === favTop.name)) {
+//          pizzaNames[pizzaNames.length] = pizza.name;
+//          break;
+//       }
+//    }
+// }
+
+// pizzas.forEach((pizza) => {
+//    console.log(pizza);
+// });
+
+// console.log(pizzaNames);
+
+// // let pizzaNames = [];
 // for (let i = 0; i < pizzas.length; i++) {
 //    pizzaNames = pizzas.toppings[i].name;
 //    return pizzaNames;
