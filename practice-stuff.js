@@ -25,11 +25,12 @@ const pizzas = [
    },
 ];
 
-const timSolution = pizzas.filter((p) => {
-   p.toppings.includes("Green Peppers");
-});
-
-console.log(timSolution);
+let pizzaNames = [];
+for (let i = 0; i < pizzas.length; i++) {
+   pizzaNames = pizzas.toppings[i].name;
+   return pizzaNames;
+}
+console.log(pizzaNames);
 
 // filteredPizzas = pizzas.filter((pizza) => {
 //    return (
@@ -40,24 +41,22 @@ console.log(timSolution);
 //    );
 // });
 
-// console.log(filteredPizzas);
-
-// const customer = {
-//    id: "8523a650-e9da-4bc2-9346-303a0a04ba9f",
-//    name: "Mur Lafferty",
-//    favoriteToppings: [
-//       { id: "4e2eb71d-8207-46c4-bc64-12a4855337ee", name: "Green Peppers" },
-//       // { id: "9c5eb777-3e1c-4fc1-91a2-cee96e69d4c1", name: "Tomatoes" },
-//    ],
-// };
-
-// const allPizzaToppings = pizzas.map((pizza) => {
-//    return pizza.toppings;
+// const names = filteredPizzas.map((pizza) => {
+//    return pizza.name;
 // });
 
-// const customerToppings = customer.favoriteToppings[0];
+// console.log(names);
+// console.log(filteredPizzas);
 
-// console.log(`all pizza toppings: `, allPizzaToppings);
-// console.log(`customer toppings: `, customerToppings);
+// console.log(pizzas.toppings[i]);
+
+const customer = {
+   id: "8523a650-e9da-4bc2-9346-303a0a04ba9f",
+   name: "Mur Lafferty",
+   favoriteToppings: [
+      { id: "4e2eb71d-8207-46c4-bc64-12a4855337ee", name: "Green Peppers" },
+      { id: "9c5eb777-3e1c-4fc1-91a2-cee96e69d4c1", name: "Tomatoes" },
+   ],
+};
 
 // You have 3 pizzas and 1 customer. How would you return an array of all the pizzas this customer may like? (Assuming a customer may like any pizza with any one of their toppings.)
