@@ -23,14 +23,14 @@ const pizzas = [
          { id: "c7316ee6-b9eb-4ce6-999f-56676970b3a1", name: "Sausage" },
       ],
    },
-   {
-      id: "29195a77-824e-41c3-8d32-8b95223f05bf",
-      name: "Tim's Taco Pizza",
-      toppings: [
-         { id: "5c9e2631-9b4c-4458-8fb0-c28bc590a462", name: "Tomatoes" },
-         { id: "c7316ee6-b9eb-4ce6-939f-56676970b3a1", name: "Green Peppers" },
-      ],
-   },
+   // {
+   //    id: "29195a77-824e-41c3-8d32-8b95223f05bf",
+   //    name: "Tim's Taco Pizza",
+   //    toppings: [
+   //       { id: "5c9e2631-9b4c-4458-8fb0-c28bc590a462", name: "Tomatoes" },
+   //       { id: "c7316ee6-b9eb-4ce6-939f-56676970b3a1", name: "Green Peppers" },
+   //    ],
+   // },
 ];
 
 const customer = {
@@ -42,17 +42,12 @@ const customer = {
    ],
 };
 
-let pizzaNames = []; // create an empty array
+let pizzaNames = [];
 for (let i = 0; i < pizzas.length; i++) {
-   // as long as i is < length of pizzas array
-   const pizza = pizzas[i]; // create var pizza , start at the first one (since first pizza in array is at index 0 and i = 0)
-   console.log("Pizza name: ", pizza.name);
-   for (let j = 0; j < customer.favoriteToppings.length; j++) {
-      // as long as j is < customer.favoriteToppings.length
-      const favTop = customer.favoriteToppings[j]; // get customer's first favorite topping (green peppers) and set it to favTop
-      console.log("  Favtop === ", favTop.name);
+   const pizza = pizzas[i];
+   for (let i2 = 0; i2 < customer.favoriteToppings.length; i2++) {
+      const favTop = customer.favoriteToppings[i2];
       if (pizza.toppings.find((topping) => topping.name === favTop.name)) {
-         // if the pizza toppings contains the favTop, then add it to our pizzaNames array
          pizzaNames[pizzaNames.length] = pizza.name;
          break;
       }
@@ -60,27 +55,27 @@ for (let i = 0; i < pizzas.length; i++) {
 }
 console.log(pizzaNames);
 
-let pizzaNames = [];
-for (let i = 0; i < pizzas.length; i++) {
-   pizzaNames = pizzas.toppings[i].name;
-   return pizzaNames;
-}
-console.log(pizzaNames);
+// let pizzaNames = [];
+// for (let i = 0; i < pizzas.length; i++) {
+//    pizzaNames = pizzas.toppings[i].name;
+//    return pizzaNames;
+// }
+// // console.log(pizzaNames);
 
-filteredPizzas = pizzas.filter((pizza) => {
-   return (
-      pizza.toppings[0].name.includes("Green Peppers") ||
-      pizza.toppings[0].name.includes("Tomatoes") ||
-      pizza.toppings[1].name.includes("Green Peppers") ||
-      pizza.toppings[1].name.includes("Tomatoes")
-   );
-});
+// filteredPizzas = pizzas.filter((pizza) => {
+//    return (
+//       pizza.toppings[0].name.includes("Green Peppers") ||
+//       pizza.toppings[0].name.includes("Tomatoes") ||
+//       pizza.toppings[1].name.includes("Green Peppers") ||
+//       pizza.toppings[1].name.includes("Tomatoes")
+//    );
+// });
 
-const names = filteredPizzas.map((pizza) => {
-   return pizza.name;
-});
+// const names = filteredPizzas.map((pizza) => {
+//    return pizza.name;
+// });
 
-console.log(names);
+// console.log(names);
 // console.log(filteredPizzas);
 
 // console.log(pizzas.toppings[i]);
