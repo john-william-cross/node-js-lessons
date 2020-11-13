@@ -1,4 +1,4 @@
-const arr = [
+const questions = [
    {
       question_id: "30a95c2b-ed3c-46a4-b32f-7bcb5aef7143",
       question_text: "How do I help my kindergarten learn to rhyme?",
@@ -77,7 +77,16 @@ const arr = [
    },
 ];
 
-let uniqueArr = arr.map((question) => {
-   console.log(question.question_id);
-   return question.question_id;
+const allAnswers = questions.map((answer) => {
+   return answer.answer_text;
 });
+
+console.log(allAnswers);
+
+const firstQuestion = questions[0];
+
+const getItems = firstQuestion.question_text.concat(
+   " " + firstQuestion.question_email
+);
+
+console.log(getItems);
