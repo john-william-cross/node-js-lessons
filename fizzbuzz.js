@@ -1,6 +1,7 @@
 let nums = [];
 
 for (let i = 0; i < 100; i++) {
+   // starting at index i, set the value of index i to i + 1
    nums[i] = i + 1;
 }
 
