@@ -1,12 +1,24 @@
-let number;
+let nums = [];
 
-function fizzBuzz(num) {
-   for (let i = 01; i < num + 1; i++) {
-      console.log(i);
-   }
+for (let i = 0; i < 100; i++) {
+   nums[i] = i + 1;
 }
 
-fizzBuzz(15);
+const fizzBuzzArray = nums.map((num) => {
+   if (num % 3 === 0 && num % 5 === 0) {
+      num = "FizzBuzz";
+   }
+   if (num % 3 === 0) {
+      num = "Fizz";
+   }
+   if (num % 5 === 0) {
+      num = "Buzz";
+   }
+   return num;
+});
+
+console.log(fizzBuzzArray);
+// console.log(`Nums Array: `, nums);
 
 // Write a program that generates an array of integers from 1 to 100 (inclusive). But:
 
